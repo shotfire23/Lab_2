@@ -9,3 +9,4 @@ to add new branche we use $ git checkout -b "name of branch"
 to switch from one branch to another we use $ git checkout "name of branch"
 
 
+ ![Alt текст](images/PicsArt_03-02-04.05.15.jpg)
