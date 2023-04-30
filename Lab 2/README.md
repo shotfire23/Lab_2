@@ -8,6 +8,6 @@ my commit previos hash: ec1e49bbff9251d3e4ca38597ae2de91903896e2
 to add new branche we use $ git checkout -b "name of branch"
 to switch from one branch to another we use $ git checkout "name of branch"
 
-add some chanches to see
+add some chanches to see(used a command $ git pull to sync with a local file)
 
 
