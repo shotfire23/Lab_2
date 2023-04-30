@@ -10,4 +10,4 @@ to switch from one branch to another we use $ git checkout "name of branch"
 
 add some chanches to see(used a command $ git pull to sync with a local file)
 
-
+![Alt текст](images/PicsArt_03-02-04.05.15.jpg)
