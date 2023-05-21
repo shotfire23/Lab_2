@@ -3,7 +3,7 @@ Pvitanya.py
 """
 
 def greet_user():
-    print("Доброго дня, введіть число для конвертування його в текст")
+    print("Доброго дня!")
 
 """
 this module using for greeting the user
