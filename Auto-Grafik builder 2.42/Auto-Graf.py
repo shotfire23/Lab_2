@@ -3,7 +3,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 
 x = [160, 320, 640, 960, 1280, 1600, 3200, 6400, 9600, 12800, 16000]
-y = [-1.01, -1.2, -1.72, -1.93, -2.38, -3.1, -6.7, -12.3, -15.9, -20, -21.3, ] #Введення даних
+y = [-1.01, -1.2, -1.72, -1.93, -2.38, -3.1, -6.7, -12.3, -15.9, -20, -21.3, ] 
 
 plt.figure(figsize=(14, 5))
 
@@ -17,7 +17,7 @@ plt.plot(x_smooth, y_smooth, 'bo-', markersize=4)
 plt.xscale('log')
 plt.xlabel('')
 plt.ylabel('')
-plt.title('Послаблення в дБ RC-ланки')
+plt.title('')
 plt.grid(True)
 
 ax = plt.gca()
@@ -26,15 +26,15 @@ ax.set_xticks(x)
 ax.set_xticklabels(x)
 
 y_ticks = np.arange(0, -22, -3)
-y_tick_labels = ['{:g}'.format(y) for y in y_ticks] #Введення діапазону
+y_tick_labels = ['{:g}'.format(y) for y in y_ticks] 
 plt.yticks(y_ticks, y_tick_labels)
 
 x_text = x[-1] * 1.275
 y_text = min(y_smooth) - 1.5
-plt.text(x_text, y_text, 'f, Гц', ha='center', va='top')
+plt.text(x_text, y_text, '', ha='center', va='top')
 
 x_text_y = x[-11] / 1.1
 y_text_y = max(y_smooth) + 2
-plt.text(x_text_y, y_text_y, 'A(f), дБ', ha='right', va='bottom')
+plt.text(x_text_y, y_text_y, '', ha='right', va='bottom')
 
 plt.show() 
