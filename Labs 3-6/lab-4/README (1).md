@@ -1,3 +1,42 @@
+## lab_4
+
+"C:\Users\shotf\AppData\Local\Microsoft\WindowsApps\python.exe" "C:\Users\shotf\OneDrive\Робочий стіл\Labs 3-6\Lab-4\Untitled-1.py"
+
+## Запуск програми з консолі 
+```bash
+ python3 Untitled-1.py
+```
+
+## Приклад виконаної роботи
+```bash
+PS C:\Users\shotf> python3 Untitled-1.py
+Enter the path to the file: C:\Users\shotf\OneDrive\Робочий стіл\Labs 3-6\lab-4\Text for lab_4.txt
+
+File: C:\Users\shotf\OneDrive\Робочий стіл\Labs 3-6\lab-4\Text for lab_4.txt
+total lines: 6
+empty lines: 0
+lines with "z": 4
+"z" and: 32
+lines with "and": 3
+Do you want to analyze another file? (y/n):
+```
+
+
+## Текст, який використовувався для цієї лабораторної
+```bash
+zzzzzzzzz
+zzz
+zzzzzzzzzzzzzzzzzz
+andromeda
+and
+z and a and z
+```
+
+
+
+
+## Коментарі до коду
+```bash
 import os #вводимо модуль os для роботи з операційною системою (включно з файлами)
 
 while True: #починаємо наш код з введення вічного циклу, до поки дія не завершиться(не дійде до break)
@@ -27,3 +66,4 @@ while True: #починаємо наш код з введення вічного
     answer = input("Do you want to analyze another file? (y/n): ") # запитуємо користувача, чи буде він надалі працювати з даною програмою
     if answer.lower() != 'y': #якщо користувач не обрав відповідь 'y'(yes), то програма зупиняє даний цикл 
         break
+```
