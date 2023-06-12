@@ -1,3 +1,29 @@
+
+"C:\Users\shotf\AppData\Local\Microsoft\WindowsApps\python.exe" "C:\Users\shotf\OneDrive\Робочий стіл\Labs 3-6\Lab-6\Lab-6 (1)"
+
+
+## Запуск програми з консолі
+
+```bash
+ python3 Lab-6 (1)
+
+```
+
+
+## Приклад виконаної роботи 
+
+```bash
+
+Enter the 'a' number: 1
+Enter the 'm' number: 2
+Enter the 'b' number: 3
+Project's 95% confidence interval: 1.33 ... 2.67 points
+
+```
+
+
+## Коментарії до програми(коду)
+```bash 
 import math # Імпортуємо модуль math для математичних операцій
 
 def estimate_task(a, m, b):  # Функція для оцінки очікуваного значення (E) та стандартного відхилення (SD) для окремого завдання
@@ -6,24 +32,22 @@ def estimate_task(a, m, b):  # Функція для оцінки очікува
     return E, SD
 
 tasks = []
-while True:#Починаємо наш цикл, який буде діяти завжди поки він не запунеться за певної умови
-    a = float(input("Enter the 'a' value for a task (or enter '0' to finish): "))  #Ми Вводимо можливість ввести значення "a", яке буде записано в десятковому значенні(наприклад: 1.00)
-    if a == 0:#якщо наше значення а=0
-        break #то ми виходимо з циклу
+
+    a = float(input("Enter the 'a' value for a task: "))
     m = float(input("Enter the 'm' value for the same task: "))#Ми Вводимо можливість ввести значення "m", яке буде записано в десятковому значенні(наприклад: 1.00)
     b = float(input("Enter the 'b' value for the same task: ")) #Ми Вводимо можливість ввести значення "b", яке буде записано в десятковому значенні(наприклад: 1.00)
     tasks.append((a, m, b))# Додаємо завдання до нашого списку
 
 E_tasks, SD_tasks = zip(*[estimate_task(*task) for task in tasks]) # Обчислюємо очікувані значення (E) та стандартні відхилення (SD) для кожного завдання у списку `tasks`
-# та збираємо їх у відповідні списки `E_tasks` та `SD_tasks`
+#та збираємо їх у відповідні списки E_tasks та SD_tasks
 
 E_project = sum(E_tasks) # Обчислення суми всіх значень E
 SD_project = math.sqrt(sum(sd**2 for sd in SD_tasks))# Обчислюємо сумарне стандартне відхилення для проекту (SD_project) на основі списку стандартних відхилень (SD_tasks)
-# Кожне стандартне відхилення підноситься до квадрату, а потім їх сума береться із коренем квадратним
+#Кожне стандартне відхилення підноситься до квадрату, а потім їх сума береться із коренем квадратним
 
 CI_min = E_project - 2*SD_project # Обчислення нижньої межі довірчого інтервалу
 CI_max = E_project + 2*SD_project # Обчислення верхньої межі довірчого інтервалу
 
 print(f"Project's 95% confidence interval: {CI_min:.2f} ... {CI_max:.2f} points") # Виведення результату
 
-
+```
